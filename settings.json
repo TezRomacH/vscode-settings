@@ -1,21 +1,41 @@
 {
     "python.pythonPath": "___",
-    "python.formatting.provider": "black",
-    "python.formatting.blackArgs": ["--line-length", "80"],
 
-    "python.sortImports.args":[ 
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "80"
+    ],
+
+    "python.sortImports.args": [
         "-rc", // recursive on all files in the project
         "-w 80", // line length, should be equal with Black’s line-length
-        "-m 3", // multiline that is compatible with Black’s
-     ],
+        "-m 3" // multiline that is compatible with Black’s
+    ],
 
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
     "python.linting.mypyEnabled": true,
+    "python.linting.mypyArgs": [
+        "--ignore-missing-imports",
+        "--follow-imports=silent",
+        "--no-implicit-optional",
+        "--warn-redundant-casts",
+        "--warn-unreachable",
+        "--allow-redefinition", // NOTE: https://mypy.readthedocs.io/en/stable/command_line.html#cmdoption-mypy-allow-redefinition
+        "--strict-equality" // NOTE: https://mypy.readthedocs.io/en/stable/command_line.html#cmdoption-mypy-strict-equality
+    ],
+    "python.linting.pydocstyleEnabled": true,
+    "python.linting.pydocstyleArgs": [
+        "--convention=google"
+    ],
 
     "python.editor.formatOnSave": true,
 
-    "editor.rulers": [ 80, 110 ],
+    "editor.rulers": [
+        80,
+        110
+    ],
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
 
@@ -25,11 +45,9 @@
     },
 
     "explorer.sortOrder": "type",
-
     "files.associations": {
         "Dockerfile*": "dockerfile"
     },
-
     "polacode.transparentBackground": true,
     "polacode.shadow": "none"
     //"polacode.shadow": "rgba(0, 0, 0, 0.55) 0px 20px 68px",
