@@ -3,8 +3,7 @@
 
     "python.formatting.provider": "black",
     "python.formatting.blackArgs": [
-        "--line-length",
-        "80"
+        "--line-length=80",
     ],
 
     "python.sortImports.args": [
@@ -23,11 +22,11 @@
         "--warn-redundant-casts",
         "--warn-unreachable",
         "--allow-redefinition", // NOTE: https://mypy.readthedocs.io/en/stable/command_line.html#cmdoption-mypy-allow-redefinition
-        "--strict-equality" // NOTE: https://mypy.readthedocs.io/en/stable/command_line.html#cmdoption-mypy-strict-equality
+        "--strict-equality", // NOTE: https://mypy.readthedocs.io/en/stable/command_line.html#cmdoption-mypy-strict-equality
     ],
     "python.linting.pydocstyleEnabled": true,
     "python.linting.pydocstyleArgs": [
-        "--convention=google"
+        "--convention=google",
     ],
 
     "python.editor.formatOnSave": true,
