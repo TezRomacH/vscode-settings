@@ -36,7 +36,7 @@
         110
     ],
     "editor.fontFamily": "Fira Code",
-    "editor.fontLigatures": true,
+    "editor.fontLigatures": "'ss03', 'ss06', 'ss07'", // required Fira Code's version of 3.0 minimum
 
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.colorCustomizations": {
